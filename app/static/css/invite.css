@@ -2,7 +2,7 @@ body {
    background-image: url(../img/bg.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: center center;
+   background-position: center left;
    background-attachment: fixed;
    color: #404040;
 }
@@ -46,8 +46,6 @@ body {
   color: #DD2C00;
 }
 
-
-
 .invite .submit {
   padding-top: 10px;
   background: none;
@@ -85,13 +83,6 @@ footer a:hover {
 }
 
 @media (max-width: 700px) {
-  body {
-     background-image: url(../img/bg.jpg);
-     background-repeat: no-repeat;
-     background-size: auto;
-     background-position: 0% 0%;
-     color: #404040;
-  }
   .invite {
     margin: 0 auto;
     width: 100%;
@@ -106,9 +97,5 @@ footer a:hover {
 
   .invite h2 {
       font-size: 1.2rem;
-  }
-
-  footer {
-    display: none;
   }
 }

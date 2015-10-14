@@ -14,32 +14,38 @@
     <div class="card">
       <h1>The Hummingbird Slack</h1>
       <h2>Probably the best chat on the Internet</h2>
-      <form>
+      <form method="post">
         <div class="row">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul class=flashes>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
           <div class="input-field col s12">
-            <input id="email" type="email" value="">
-            <label for="email">Email adress</label>
+            <input name="email" id="email" type="email" value="">
+            <label for="email">Email</label>
           </div>
           <div class="input-field col s12">
-            <input type="text" value="">
-            <label for="">Username</label>
+            <input name="hbuser" type="text" value="">
+            <label for="hbuser">Hummingbird Username</label>
           </div>
           <button class="waves-effect waves-light btn-flat right" type="submit" name="action">SUBMIT</button>
-
         </div>
       </form>
     </div>
-    <span class="col s12">Don't have an account? Get one <a href="#">here!</a></span>
-    <span class="col s12">Already member of the chat? Join <a href="#">here</a> or download the <a href="#">app.</a></span>
+    <span class="col s12">Don't have a <a href="http://hummingbird.me">hummingbird.me</a> account? Get one <a href="http://hummingbird.me/sign-up">here!</a></span>
+    <span class="col s12">Already member of the chat? <a href="#">Join</a> or download the <a href="#">app!</a></span>
     </div>
   </div>
   <footer>
     <div class="valign-wrapper">
     <ul>
       <li><img src="img/hb.png" alt=" " /></li>
-      <li><a href="#">Rules</a> |</li>
-      <li><a href="#">Something</a> |</li>
-      <li><a href="#">Something else</a> |</li>
+      <li><a href="#">Rules</a> | </li>
       <li>Background Image by <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40316086">LighTofHeaven</a> (edited by <a href="http://konachan.com/post/show/174709/black_eyes-brown_hair-lightofheaven-long_hair-maki">MetalAnimer</a>)</li>
     </ul>
   </div>
