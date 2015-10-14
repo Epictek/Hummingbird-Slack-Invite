@@ -6252,7 +6252,7 @@ select:focus {
 
 button:focus {
   outline: none;
-  background-color: #ff4d14; }
+  background-color: none; }
 
 label {
   font-size: 0.8rem;
