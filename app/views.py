@@ -3,24 +3,38 @@ from app import app, models, db
 import uuid
 import re
 import requests
+from sqlalchemy import *
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         invite_id = str(uuid.uuid4())
         email = request.form['email']
-        hbuser = request.form['hbuser']
+        hb_user = request.form['hbuser']
+        print(email)
+        print(hb_user)
         if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
             flash("Please enter a valid email address")
             return redirect(url_for('index'))
-        r = requests.get("https://hummingbird.me/api/v1/users/" + hbuser)
+        r = requests.get("https://hummingbird.me/api/v1/users/" + hb_user)
         if r.status_code == 404:
             flash("User not found")
             return redirect(url_for('index'))
         if r.status_code != 200:
             flash("Hummingbird is up in flames? Try later.")
             return redirect(url_for('index'))
-        invite = models.Invite(invite_id, email, request.form['hbuser'], request.remote_addr)
-        db.session.add(invite)
+        user = models.User.query.filter(or_(models.User.hb_user==hb_user, models.User.email==email)).first()
+        print(user)
+        if user != None:
+            if user.invite_sent == True:
+                flash("Invite already sent.")
+                return redirect(url_for('index'))
+        user = models.User.query.filter(and_(models.User.hb_user==hb_user, models.User.email==email)).first()
+        if user != None:
+            session['invite_id'] = user.invite_id
+            return redirect(url_for('verify'))
+        user = models.User(invite_id, hb_user, email, request.remote_addr)
+        db.session.add(user)
         db.session.commit()
         session['invite_id'] = invite_id
         return redirect(url_for('verify'))
