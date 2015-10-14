@@ -1,0 +1,114 @@
+body {
+   background-image: url(../img/bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   color: #404040;
+}
+.invite {
+  background-color: none;
+  position: absolute;
+  width: 700px;
+  margin-left: 20px;
+  padding: 10px;
+  top: 50%;
+  transform: translate(0%,-50%);
+}
+
+.invite .card {
+  padding: 0 15px 0 15px;
+}
+
+.invite h1 {
+  font-size: 2.93rem;
+  padding: 0px 0.75rem;
+}
+
+.invite h2 {
+    font-size: 1.64rem;
+    color: #757575;
+    padding: 0px 0.75rem;
+
+}
+
+.invite span {
+  padding-top: 5px;
+  color: white;
+  padding: 0;
+}
+
+.invite span a {
+  color: grey;
+}
+
+.invite span a:hover {
+  color: #DD2C00;
+}
+
+
+
+.invite .submit {
+  padding-top: 10px;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  color: #757575;
+}
+
+ul {
+  margin: 0 auto;
+}
+
+footer li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+footer a {
+  color: grey
+}
+
+footer a:hover {
+  color: #DD2C00;
+}
+
+@media (max-width: 700px) {
+  body {
+     background-image: url(../img/bg.jpg);
+     background-repeat: no-repeat;
+     background-size: auto;
+     background-position: 0% 0%;
+     color: #404040;
+  }
+  .invite {
+    margin: 0 auto;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .invite h1 {
+    font-size: 2rem;
+  }
+
+  .invite h2 {
+      font-size: 1.2rem;
+  }
+
+  footer {
+    display: none;
+  }
+}
