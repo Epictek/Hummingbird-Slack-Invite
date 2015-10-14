@@ -46,14 +46,8 @@ body {
   color: #DD2C00;
 }
 
-.invite .submit {
-  padding-top: 10px;
-  background: none;
-  border: none;
-  text-transform: uppercase;
-  font-size: 12pt;
-  font-weight: bold;
-  text-align: right;
+.invite button {
+  margin-top: 24px;
 }
 
 footer {
