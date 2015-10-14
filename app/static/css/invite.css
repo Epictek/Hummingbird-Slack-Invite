@@ -56,6 +56,10 @@ body {
   text-align: right;
 }
 
+li.message {
+  margin-left: 12px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
