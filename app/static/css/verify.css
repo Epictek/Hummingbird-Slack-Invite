@@ -1,0 +1,127 @@
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff3d00;
+}
+
+.code {
+
+  font-size: 1.3rem;
+  background-color: #eeeeee;
+  padding: 10px !important;
+  border-radius: 5px;
+  margin: 20px 10px 10px 10px;
+}
+
+.steps {
+  padding: 20px 20px 0 20px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.steps .row {
+  margin-bottom: 0;
+}
+
+.banner {
+  background-color: #FF5722;
+  height: 230px;
+  color: #ffffff;
+  padding-left: 100px;
+}
+
+footer .row {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0 0;
+  padding: 0 20px;
+  color: #cccccc;
+}
+
+footer .divider {
+  margin-left: 0 auto;
+}
+
+button {
+  font-weight: 500;
+}
+
+ol {
+    counter-reset:li;
+    font-size: 1.3rem;
+}
+
+ol span {
+  color: #ff3d00;
+}
+
+ol i {
+  color: #cccccc;
+  font-weight: 300;
+}
+
+ol > li {
+    padding:2px 8px;
+    margin: 0 0 10px 0;
+    list-style:none;
+}
+
+ol > li:last-child {
+  margin-bottom: 0;
+}
+
+ol > li:before {
+    display: inline-block;
+    vertical-align: middle;
+    content:counter(li);
+    counter-increment:li;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    margin-right:8px;
+    background: #FF5722;
+    color:#ffffff;
+    text-align:center;
+}
+
+@media (max-width: 720px) {
+
+  .banner {
+    background-color: #FF5722;
+    height: 230px;
+    color: #ffffff;
+    padding-left: 10px;
+  }
+
+  ol {
+      counter-reset:li;
+      font-size: .8rem;
+  }
+
+  ol > li:before {
+      font-size: 1rem;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      line-height: 30px;
+  }
+}
