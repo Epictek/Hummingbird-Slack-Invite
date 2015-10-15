@@ -4,6 +4,7 @@ import uuid
 import re
 import requests
 from sqlalchemy import *
+import os
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
