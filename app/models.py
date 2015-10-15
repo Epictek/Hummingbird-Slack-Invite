@@ -14,7 +14,7 @@ class User(db.Model):
         self.hb_user = hb_user
         self.email = email
         self.ip = ip
-        self.invite_sent = False
+        self.verified = False
         self.date = datetime.datetime.utcnow()
 
     def __repr__(self):
