@@ -6,7 +6,7 @@ class User(db.Model):
     hb_user = db.Column(db.String(64), index=True)
     email = db.Column(db.String(120), index=True)
     ip = db.Column(db.String(12))
-    invite_sent = db.Column(db.Boolean)
+    verified = db.Column(db.Boolean)
     date = db.Column(db.DateTime)
 
     def __init__(self,invite_id, hb_user, email, ip):

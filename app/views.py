@@ -31,7 +31,7 @@ def index():
                 flash("Account already verified. Another invite has been sent.")
                 data = {
                     'email': user.email,
-                    'token': os.environ['slack-token'],
+                    'token': os.environ['SLACKTOKEN'],
                     'set_active': 'true',
                     'first_name': hb_user,
                 }
