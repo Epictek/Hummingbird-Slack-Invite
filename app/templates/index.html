@@ -19,9 +19,9 @@
         <div class="row">
           {% with messages = get_flashed_messages() %}
             {% if messages %}
-              <ul class="flashes deep-orange flow-text">
+              <ul class="flashes flow-text">
                 {% for message in messages %}
-                <li class="valign-wrapper"><i class="material-icons small">report_problem</i> {{ message }}</li>
+                <li class="valign-wrapper "><i class="material-icons">report_problem</i> {{ message }}</li>
               {% endfor %}
               </ul>
             {% endif %}
