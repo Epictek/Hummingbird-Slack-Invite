@@ -5,6 +5,7 @@
     <title>Slack Chat</title>
 
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}"  media="screen,projection"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/invite.css') }}" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -18,9 +19,9 @@
         <div class="row">
           {% with messages = get_flashed_messages() %}
             {% if messages %}
-              <ul class=flashes>
-              {% for message in messages %}
-                <li class="message">{{ message }}</li>
+              <ul class="flashes flow-text">
+                {% for message in messages %}
+                <li class="valign-wrapper "><i class="material-icons">report_problem</i> {{ message }}</li>
               {% endfor %}
               </ul>
             {% endif %}
@@ -44,7 +45,7 @@
   <footer>
     <div class="valign-wrapper">
     <ul>
-      <li><img src="img/hb.png" alt=" " /></li>
+      <li><img src="{{ url_for('static', filename='img/hb.png') }}" alt=" " /></li>
       <li><a href="#">Rules</a> | </li>
       <li>Background Image by <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40316086">LighTofHeaveN</a> (edited by <a href="http://konachan.com/post/show/174709/black_eyes-brown_hair-lightofheaven-long_hair-maki">MetalAnimer</a>)</li>
     </ul>

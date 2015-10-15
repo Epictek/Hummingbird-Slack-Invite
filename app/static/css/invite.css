@@ -51,8 +51,21 @@ body {
   margin-top: 24px;
 }
 
-li.message {
-  margin-left: 12px;
+.flashes {
+  font-weight: 300;
+  font-size: 1.3rem;
+  background-color: #FBE9E7;
+  color: #736a69;
+  padding: 10px;
+  margin: 0 15px;
+  border-radius: 2px;
+}
+
+.flashes i {
+  font-size: 2rem;
+  color: #736a69;
+  padding-right: 25px;
+  padding-left: 5px;
 }
 
 footer {
@@ -98,5 +111,9 @@ footer a:hover {
 
   .invite h2 {
       font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: .71rem;
   }
 }
