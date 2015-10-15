@@ -50,6 +50,16 @@ body {
   margin-top: 24px;
 }
 
+.flashes {
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.flashes i {
+  padding-right: 5px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -91,5 +101,9 @@ footer a:hover {
 
   .invite h2 {
       font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: .71rem;
   }
 }
