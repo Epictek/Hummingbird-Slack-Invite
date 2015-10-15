@@ -1,17 +1,24 @@
+body {
+  background: #F0F0F0;
+}
 
 h1 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 4px;
   color: #ff3d00;
 }
 
-.code {
+.card {
+  border-radius: 5px;
+}
 
+.code {
   font-size: 1.3rem;
   background-color: #eeeeee;
   padding: 10px !important;
@@ -38,25 +45,13 @@ h2 {
   background-color: #FF5722;
   height: 230px;
   color: #ffffff;
-  padding-left: 100px;
-}
-
-footer .row {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  margin: 0 0;
-  padding: 0 20px;
-  color: #cccccc;
-}
-
-footer .divider {
-  margin-left: 0 auto;
+  padding-left: 25px;
 }
 
 button {
   font-weight: 500;
+  margin-right: 11px;
+  margin-bottom: 11px;
 }
 
 ol {
@@ -64,23 +59,14 @@ ol {
     font-size: 1.3rem;
 }
 
-ol span {
+ol a {
   color: #ff3d00;
 }
 
-ol i {
-  color: #cccccc;
-  font-weight: 300;
-}
-
 ol > li {
-    padding:2px 8px;
+    padding: 2px 8px;
     margin: 0 0 10px 0;
     list-style:none;
-}
-
-ol > li:last-child {
-  margin-bottom: 0;
 }
 
 ol > li:before {
@@ -92,12 +78,12 @@ ol > li:before {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     height: 50px;
     width: 50px;
     border-radius: 25px;
     line-height: 50px;
-    margin-right:8px;
+    margin-right: 14px;
     background: #FF5722;
     color:#ffffff;
     text-align:center;
