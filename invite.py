@@ -18,7 +18,7 @@ for story in r['stories']:
                 print(user.email)
                 data = {
                     'email': user.email,
-                    'token': "xoxp-12303250033-12300878704-12515749158-d8bd8f3793",
+                    'token': "xoxp-12303250033-12300878704-12518993987-b9aee57bdc",
                     'set_active': 'true',
                     'first_name': hb_user,
                 }
