@@ -52,6 +52,7 @@ body {
 }
 
 .flashes {
+  font-weight: 200;
   color: #ffffff;
   padding: 5px;
   border-radius: 2px;
