@@ -28,17 +28,7 @@ def index():
         print(user)
         if user != None:
             if user.verified == True:
-                flash("Account already verified. Another invite has been sent.")
-                data = {
-                    'email': user.email,
-                    'token': os.environ['SLACKTOKEN'],
-                    'set_active': 'true',
-                    'first_name': hb_user,
-                }
-                r = requests.post(
-                    'http://superhbchat.slack.com/api/users.admin.invite',
-                    params=data
-                ).json()
+                flash("Account already verified.")
                 return redirect(url_for('index'))
         user = models.User.query.filter(and_(models.User.hb_user==hb_user, models.User.email==email)).first()
         if user != None:

@@ -17,7 +17,6 @@ for story in r['stories']:
                 print(user)
                 if user != None:
                     if user.verified == False:
-                        user.verified = True
                         print(user.email)
                         data = {
                             'email': user.email,
@@ -26,8 +25,9 @@ for story in r['stories']:
                             'first_name': hb_user,
                         }
                         r = requests.post(
-                             'http://superhbchat.slack.com/api/users.admin.invite',
+                             'http://humchat.slack.com/api/users.admin.invite',
                             params=data
                         ).json()
-                        print(r)
-                        db.session.commit()
+                        if r['ok'] == True:
+                            user.verified = True
+                            db.session.commit()
