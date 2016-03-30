@@ -4,4 +4,4 @@ Slack Invite site for signing up users of hummingbird.me to the unofficial slack
 
 
 ## Contributors
-Design done by [xip](http://github.com/xiprox) and CSS done by [@FirstZero](https://github.com/FirstZero)
+Design done by [xip](http://github.com/xiprox) and CSS done by [FirstZero](https://github.com/FirstZero)
